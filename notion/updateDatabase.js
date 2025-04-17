@@ -1,4 +1,4 @@
-const notion = require("./client");
+import notion from "./client.js";
 
 async function updateNotion(news, priceData) {
   const { ethPrice, btfdEstPrice, status } = priceData;
@@ -54,4 +54,4 @@ async function updateNotion(news, priceData) {
   });
 }
 
-module.exports = updateNotion;
+export default updateNotion;

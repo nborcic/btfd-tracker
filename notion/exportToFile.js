@@ -1,6 +1,5 @@
-const fs = require("fs");
-const path = require("path");
-const notion = require("./client");
+import fs from "fs";
+import notion from "./client.js";
 
 async function exportDatabase(databaseId, filePath) {
   const pages = [];
@@ -28,4 +27,4 @@ async function exportDatabase(databaseId, filePath) {
   console.log(`📝 Exported ${simplified.length} rows to: ${filePath}`);
 }
 
-module.exports = exportDatabase;
+export default exportDatabase;

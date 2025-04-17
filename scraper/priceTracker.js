@@ -1,5 +1,6 @@
-const axios = require("axios");
-require("dotenv").config();
+import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config();
 
 async function fetchBtfdPrice() {
   // 1. Get ETH price from CoinGecko
@@ -8,7 +9,7 @@ async function fetchBtfdPrice() {
   );
 
   // 2. Placeholder ETH pair address on Uniswap — replace after launch
-  const pairAddress = `${process.env.ETH_COIN_GECKO_ADDRESS}`; // TODO: Update after listing or make a followup to get the address
+  const pairAddress = `${process.env.ETH_COIN_GECKO_ADDRESS}`; // TODO: Update after listing 
   let btfdEstPrice = null;
   let status = "Not Listed";
 
@@ -32,4 +33,4 @@ async function fetchBtfdPrice() {
   };
 }
 
-module.exports = fetchBtfdPrice;
+export default fetchBtfdPrice;

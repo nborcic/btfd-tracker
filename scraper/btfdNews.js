@@ -1,9 +1,9 @@
-const axios = require("axios");
-const cheerio = require("cheerio");
+import axios from "axios";
+import { load } from "cheerio";
 
 async function fetchBtfdNews() {
   const { data } = await axios.get("https://www.btfd.io");
-  const $ = cheerio.load(data);
+  const $ = load(data);
   const headlines = [];
 
   $("h2, h3, p").each((i, el) => {
@@ -16,4 +16,4 @@ async function fetchBtfdNews() {
   return headlines.slice(0, 5);
 }
 
-module.exports = fetchBtfdNews;
+export default fetchBtfdNews;

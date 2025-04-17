@@ -1,5 +1,5 @@
-const { Client } = require("@notionhq/client");
+import { Client } from "@notionhq/client";
 
 const notion = new Client({ auth: process.env.NOTION_KEY });
 
-module.exports = notion;
+export default notion;

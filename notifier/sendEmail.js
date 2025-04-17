@@ -21,7 +21,6 @@ async function sendTestAlertEmail() {
     text: "Your BTFD token has just been marked as Listed!"
   });
 
-  console.log("📨 Test email sent!");
 }
 
 export default sendTestAlertEmail;

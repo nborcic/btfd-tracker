@@ -27,7 +27,7 @@ async function runTracker() {
 if (status === "Listed") {
   await sendEmail(
     "🚨 BTFD IS LISTED!",
-    `Token is now listed at $${priceData.btfdEstPrice}. Check your tracker to sell for ROI.`
+    `Token is now listed at ${priceData.btfdEstPrice}. Check your tracker to sell for ROI.`
   );
 }
 

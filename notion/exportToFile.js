@@ -19,6 +19,7 @@ async function exportDatabase(databaseId, filePath) {
     name: page.properties.Name?.title?.[0]?.plain_text || "No Name",
     price: page.properties.Price?.rich_text?.[0]?.plain_text || null,
     news: page.properties.News?.rich_text?.[0]?.plain_text || null,
+    eth: page.properties.ETH?.rich_text?.[0]?.plain_text || null,
     status: page.properties.Status?.status?.name || null,
     created: page.created_time
   }));
